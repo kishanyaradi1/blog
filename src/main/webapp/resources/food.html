@@ -1,0 +1,973 @@
+<html><head>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/resources/css/jquery/jquery.dataTables.min.css">
+
+<link rel="stylesheet" href="/resources/css/main.css">
+<link rel="stylesheet" href="/resources/css/jquery/jquery-ui.css">
+<!-- <link rel="stylesheet" href="/resources/css/css5/simple-sidebar.css"> -->
+<link rel="stylesheet" href="/resources/css/jquery/sidebar.css">
+<link rel="stylesheet" href="/resources/css/bootstrap/bootstrap.min.css">
+
+<script src="/resources/js/jquery/jquery-3.3.1.min.js"></script>
+<script src="/resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="/resources/js/bootstrap/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="/resources/js/bootstrap/bootstrap-4-navbar.js"></script>
+<script src="/resources/js/jquery/jquery-ui.js"></script>
+
+
+<!--    <link href="/resources/css/css5/magnific-popup.css" rel="stylesheet">
+	<link href="/resources/css/css5/creative.min.css" rel="stylesheet"> -->
+	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head><body>
+   <header>
+   
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link  " href="/language/en/nutritionSearch.html">Nutrition Search</a></li>
+            <li class="nav-item"><a class="nav-link  " href="/language/en/bmiCalculator.html">BMI Calculator</a></li>
+            <li class="nav-item"><a class="nav-link" href="/language/en/healthCalculator.html">Health Calculators</a></li>
+            <li class="nav-item "><a class="nav-link" href="/language/en/easternMedicines.html">Naturopathic Medicine</a></li>
+          <li class="nav-item"><a class="nav-link" href="/language/en/admin.html">Admin</a></li>
+          </ul>
+
+                <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/language/en">en</a>
+                        <a class="dropdown-item" href="/language/zh">cn</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/register') }}">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+      <!-- Fixed navbar 
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link  " href="/language/en/nutritionSearch.html">Nutrition Search</a></li>
+            <li class="nav-item"><a class="nav-link  " href="/language/en/bmiCalculator.html">BMI Calculator</a></li>
+            <li class="nav-item"><a class="nav-link" href="/language/en/calorieBurnCalculator.html">Calories Burned</a></li>
+            <li class="nav-item "><a class="nav-link" href="/language/en/easternMedicines.html">Naturopathic Medicine</a></li>
+          </ul>
+          
+         
+      </nav> -->
+    </header>
+	
+
+
+
+
+
+
+
+
+
+<link href="resources/css/custom.css" rel="stylesheet">
+        
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" href="style.css">
+
+
+<br>
+<br>
+<div class="container-fluid">
+<div class="wrapper">
+	<!-- Sidebar Holder -->
+	<nav id="sidebar">
+		<div class="sidebar-header">
+			<h3>
+				Start Search
+			</h3>
+		</div>
+
+		<ul class="list-unstyled components">
+			<li class="active"><a href="/language/en/foods.html">Nutrition Search</a></li>
+			<li class="active"><a href="/language/en/nutritionSearch/compare-food.html">Compare Foods</a></li>
+			<li class="active"><a href="/language/en/nutritionSearch/nutrition-fact-meal.html">Meal Nutrition Value</a></li>
+			<li class="active"><a href="/language/en/nutritionSearch/food-by-nutrion-value.html">Foods by Nutrion</a></li>
+	</ul></nav>
+
+	<!-- Page Content Holder -->
+	<div class="col-lg-10">
+	<div id="content">
+		<nav class="navbar navbar-default col-sm-4">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+						<i class="glyphicon glyphicon-align-left"></i> <span>Toggle Search</span>
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				
+					
+					
+					
+						
+
+
+
+
+
+
+
+
+
+
+<link href="resources/css/custom.css" rel="stylesheet">
+        
+<style>
+/* Make the image fully responsive */
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+}
+
+
+.btn-info {
+	color: #fff;
+	background-color: #170200;
+	border-color: #178888;
+}
+
+.btn-info:hover {
+	color: #fff;
+	background-color: #130096;
+	border-color: #11118b;
+}
+
+.vh-100 {
+    min-height: 100vh;
+}
+
+</style>
+
+<title>welcome</title>
+
+<div class="container">
+
+  
+  <h2>Bootstrap Dropdown as Select</h2>
+
+
+    <form id="nutrition" class="form-inline registrationForm" action="nutritionSearch" method="post" onsubmit="return validateForm()">
+        <div class="col-md-8 col-sm-offset-4">
+            <!--width is set by this div -->
+            <div class="input-group">
+                <input id="desc" name="desc" class="form-control basicAutoComplete" placeholder="Enter food name" type="text" value="" autocomplete="off">
+                <input id="id" name="id" type="hidden" value="0">
+            </div>
+        </div>
+    </form>
+    <br>
+    <div>
+        <table id="table_id" class="table table-hover table-bordered table-striped table-condensed table-sm"><thead>
+                <tr>
+                    <th></th>
+                    <th>food id</th>
+                    <th colspan="1">Quantity</th>
+                    <th>Food Name</th>
+                    
+                    <th>Actions</th>
+                </tr>
+            </thead><tbody>
+            
+
+            
+                
+                    
+                    
+                        
+                            
+                            
+                        
+                        
+                    
+                    <tr id="9139" class=" rowSelected">
+                        <td><input type="radio" name="items" checked="checked"></td>
+                        <td>9139</td>
+                        <td>
+
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Active</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+                                    
+                                        <a class="dropdown-item" href="#">cup - 165.0 gm </a>
+                                    
+                                        <a class="dropdown-item" href="#">fruit, without refuse - 55.0 gm </a>
+                                    
+                                </div>
+                            </div>
+                        </td>
+                        <td><div data-toggle="tooltip" data-placement="top" title="GUAVAS,COMMON,RAW" class="trunc">
+                                GUAVAS,COMMON,RAW
+                            </div></td>
+                        <td class="pt-0 pb-0" align="center">
+                            <div data-role="display">
+                                <a href="/deleteFoodRow/9139.html" class="btn btn-danger triggerRemove">remove blog</a>
+                            </div>
+                        </td>
+                    </tr>
+                
+            </tbody></table>
+    </div>
+    <br> <br> <br> <br>
+        <div id="table_nutrition"><div class="card white-space:pre">
+        <div class="card-header btn btn-info " data-toggle="collapse" href="#test-block" aria-expanded="true" aria-controls="test-block" style="text-align: left">card header</div>
+        <div class="card-body collapse p-0" id="test-block">
+                
+                    <li class="list-group-item pt-2 pb-2 border-bottom-0">abcd ef gh gcgcgggcgcgggc abcd ef gh gcgcgggcgcgggcabcd ef gh gcgcgggcgcgggcabcd ef gh gcgcgggcgcgggcabcd ef gh gcgcgggcgcgggc
+hghhgghg
+vvvvvvvv</li>
+                        
+                    <li class="list-group-item pt-2 pb-2 border-bottom-0">
+123456
+vvvvvvvv</li>
+                        
+                    <li class="list-group-item pt-2 pb-2 border-bottom-0">
+line 3
+vvvvvvvv</li>
+                        
+                    <li class="list-group-item pt-2 pb-2 border-bottom-0">
+mnopvvvvvvvv</li>
+                        
+        </div>
+    </div><br><br><div class="row">
+            <div class="col-md-6">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="3" scope="col" class="text-center">Vitamins</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="font-weight: bold">
+                            <td>Nutrient</td>
+                            <td>Amount</td>
+                            <td>DV</td>       
+                        </tr>
+                        
+                        
+                        
+                            <tr>
+                                <td>Vitamin A</td>
+                                
+                                <td>
+                                            
+                                               624
+                                            
+                                            
+                                         IU</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin C </td>
+                                
+                                <td>
+                                            
+                                            
+                                               228.30
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         90.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin D</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.00
+                                            
+                                         mcg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin D3</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.00
+                                            
+                                         IU</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin E</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.73
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin K</td>
+                                
+                                <td>
+                                            
+                                            
+                                               2.60
+                                            
+                                         mcg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin B1</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.07
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin B3</td>
+                                
+                                <td>
+                                            
+                                            
+                                               1.08
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin B5</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.45
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin B6</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.11
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin B7</td>
+                                
+                                <td>
+                                            
+                                            
+                                               49.00
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Vitamin B12</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.00
+                                            
+                                         mcg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Retinol</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.00
+                                            
+                                         mcg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Choline</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.00
+                                            
+                                         mcg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                        
+                    </tbody>
+                </table>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="3" scope="col" class="text-center">Carbohydrates</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="font-weight: bold">
+                            <td>Nutrient</td>
+                            <td>Amount</td>
+                            <td>DV</td>
+                        </tr>
+                        
+                        
+                        
+                            <tr>
+                                <td>Carbohydrate</td>
+                                
+                                <td>
+                                            
+                                            
+                                               14.32
+                                            
+                                         g</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Fiber</td>
+                                
+                                <td>
+                                            
+                                            
+                                               5.40
+                                            
+                                         g</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Sugars</td>
+                                
+                                <td>
+                                            
+                                            
+                                               8.92
+                                            
+                                         g</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="3" scope="col" class="text-center">Minerals</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="font-weight: bold">
+                            <td>Nutrient</td>
+                            <td>Amount</td>
+                            <td>DV</td>
+                        </tr>
+                        
+                        
+                        
+                            <tr>
+                                <td>Calcium</td>
+                                
+                                <td>
+                                            
+                                            
+                                               18.00
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         1,300.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Iron</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.26
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         8.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Magnesium</td>
+                                
+                                <td>
+                                            
+                                            
+                                               22.00
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         400.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Phosphorus</td>
+                                
+                                <td>
+                                            
+                                            
+                                               40.00
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         700.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Potassium</td>
+                                
+                                <td>
+                                            
+                                            
+                                               417.00
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         4.70 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Sodium</td>
+                                
+                                <td>
+                                            
+                                            
+                                               2.00
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         1.50 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Zinc</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.23
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         11.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Copper</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.23
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         900.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Manganese</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.15
+                                            
+                                         mg</td>
+                                        
+                                        <td>
+                                         2.30 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Selenium</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.60
+                                            
+                                         mcg</td>
+                                        
+                                        <td>
+                                         55.00 %</td>
+                            </tr>
+                        
+                        
+                    </tbody>
+                </table>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="3" scope="col" class="text-center">Other Nutritions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="font-weight: bold">
+                            <td>Nutrient</td>
+                            <td>Amount</td>
+                            <td>DV</td>
+                        </tr>
+                        
+                        
+                        
+                            <tr>
+                                <td>protein</td>
+                                
+                                <td>
+                                            
+                                            
+                                               2.55
+                                            
+                                         g</td>
+                                        
+                                        <td>
+                                         55.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Lipid</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.95
+                                            
+                                         g</td>
+                                        
+                                        <td>
+                                         55.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Water</td>
+                                
+                                <td>
+                                            
+                                            
+                                               80.80
+                                            
+                                         g</td>
+                                        
+                                        <td>
+                                         55.00 %</td>
+                            </tr>
+                        
+                        
+                    </tbody>
+                </table>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="3" scope="col" class="text-center">Fats and Fatty Acids</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="font-weight: bold">
+                            <td>Nutrient</td>
+                            <td>Amount</td>
+                            <td>DV</td>
+                        </tr>
+                        
+                        
+                        
+                            <tr>
+                                <td>Monounsaturated fatty acids</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.09
+                                            
+                                         g</td>
+                                        
+                                        <td>
+                                         55.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Polyunsaturated fatty acids</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.40
+                                            
+                                         g</td>
+                                        
+                                        <td>
+                                         55.00 %</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Saturated fatty acids</td>
+                                
+                                <td>
+                                            
+                                            
+                                               0.27
+                                            
+                                         g</td>
+                                        
+                                        <td>
+                                         55.00 %</td>
+                            </tr>
+                        
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div></div>
+</div>
+<script>
+
+
+$(document).ready(function() {
+	//alert("")
+	$("#table_nutrition").load(location.href + " #table_nutrition>*","");
+});
+
+	$(document).ready(function() {
+		alert(1)
+		$('#desc').autocomplete({
+			serviceUrl : '/getFoodsList',
+			paramName : "foodName",
+			delimiter : ",",
+			minChars: 3,
+			autoSelectFirst : true,
+			onSelect : function(suggestion) {
+				$('#desc').val("")
+				$.post("/foodAdded",
+				        {
+					id : suggestion.data,
+					quantity : 100
+				        },
+				        function(data,status){
+				            $("#table_id").load(location.href + " #table_id>*","");
+							$("#desc").load(location.href + " #desc>*","");
+							$("#table_nutrition").load(location.href + " #table_nutrition>*","");
+				        });
+				
+			},
+			
+			transformResult : function(response) {
+				return {
+					//must convert json to javascript object before process
+					suggestions : $.map($.parseJSON(response), function(item) {
+						return {
+							value : item.tagName,
+							data : item.id
+						};
+					})
+
+				};
+			},
+		});
+		
+		
+		
+	});
+	
+	
+	
+	$(document).on('change', 'input:radio', function (event) {
+		
+		alert(2)
+		$(this).parents().siblings().removeClass('rowSelected'); //remove previous active class
+	    $(this).closest("tr").addClass("rowSelected");
+		
+		var id = $(this).closest("tr").attr("id")
+		
+		
+		//$(this).toggleClass('rowSelected');
+		//$(this).siblings().removeClass('rowSelected');
+		
+		$.ajax({
+		    type: 'POST',
+		    url: '/selectedRow',
+		    data: { 
+		        'id': id, 
+		        'quantity': 100,
+		    },
+		    success: function(msg){
+		    	//$("#table_id").load(window.location + " #table_id");
+				$("#selectedRowDetails").load(location.href + " #selectedRowDetails>*","");
+				$("#table_nutrition").load(window.href + " #table_nutrition>*","");
+				var fid = "#"+id
+				$(fid).addClass("rowSelected");
+		    	$(fid).siblings().removeClass('rowSelected'); //remove previous active class
+				
+		    }
+		});
+		
+		});
+
+
+	
+
+	
+	$(function () {
+		  $('[data-toggle="tooltip"]').tooltip();
+		});
+	
+	
+	$(function(){
+		   $(".dropdown-menu").on('click', 'a', function(){
+			   alert('');
+			   $(this).parents('.dropdown').find('button').text($(this).text());
+		      
+		   });
+
+	});
+
+</script>
+
+					
+					
+					
+				
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+	<center>
+		
+
+© 
+	</center>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
+		
+  
+
+<div class="autocomplete-suggestions" style="position: absolute; max-height: 300px; z-index: 9999; top: 244.512px; left: 344.988px; width: 645.335px; display: none;"><div class="autocomplete-suggestion" data-index="0">BABYFOOD,FRUIT,<strong>GUA</strong>VA&amp;PAPAYA W/TAPIOCA,STR</div><div class="autocomplete-suggestion autocomplete-selected" data-index="1"><strong>GUA</strong>VAS,COMMON,RAW</div><div class="autocomplete-suggestion" data-index="2"><strong>GUA</strong>VAS,STRAWBERRY,RAW</div><div class="autocomplete-suggestion" data-index="3"><strong>GUA</strong>VA SAUCE,COOKED</div><div class="autocomplete-suggestion" data-index="4"><strong>GUA</strong>NABANA NECTAR,CND</div><div class="autocomplete-suggestion" data-index="5"><strong>GUA</strong>VA NECTAR,CND,W/ ADDED VIT C</div><div class="autocomplete-suggestion" data-index="6"><strong>GUA</strong>VA NECTAR,W/ SUCRALOSE,CND</div><div class="autocomplete-suggestion" data-index="7">BEV, COCA-COLA COMY,NOS 0,ENEY DRK,SUG-FRE, <strong>GUA</strong>NA,  B6 &amp; B12</div><div class="autocomplete-suggestion" data-index="8">BEVERAGES,V8 SPLASH JUC DRINKS,<strong>GUA</strong>VA PASSION FRUIT</div><div class="autocomplete-suggestion" data-index="9">PASTRY,PASTELITOS DE <strong>GUA</strong>VA (<strong>GUA</strong>VA PASTRIES)</div><div class="autocomplete-suggestion" data-index="10">GUMS,SD GUMS (INCL LOCUST BEAN,<strong>GUA</strong>R)</div></div></body></html>

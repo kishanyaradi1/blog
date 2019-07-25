@@ -1,0 +1,64 @@
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 5px 5px; white-space: nowrap; overflow: hidden; font-size:22px}
+.autocomplete-selected { background: #F0F999; }
+.autocomplete-suggestions strong { font-weight: bold; color: #3399FF; }
+
+nav a:hover { color: #66A5AD !important; }
+
+.bg-dark {
+    background-color: #004D47 !important;
+}
+
+.input-group-addon{color:#ff0000; background-color: #ffffff;}
+.table thead th {
+ vertical-align: bottom;
+ border-bottom: 2px solid #eceeef;
+ background-color: #128277;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: #004D47;
+}
+
+
+.btn-outline-secondary {
+  color: #6c757d;
+  background-color: transparent;
+  background-image: none;
+  border-color: #6c007d;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #12757d;
+  border-color: #0c757d;
+}
+
+.btn-outline-secondary:focus, .btn-outline-secondary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(108, 02, 125, 0.5);
+}
+
+.btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
+  color: #60710d;
+  background-color: transparent;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #6c197d;
+  border-color: #6c187d;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(108, 10, 125, 0.5);
+}
+
+.rowSelected {
+  background-color: #b80aff !important;
+} 
+
+tr.border_bottom td {
+    background-color: #b80aff !important;
+    }
